@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="icon" type="image/x-icon" href="./img/rid4.png">
+
+</head>
+
+<body onresize="updateLines()">
+    <div id="title-tree"><a href=" https://rodovid.online"><img src="./img/logo.gif" width="50"></a>
+        <h2>Family tree №2 search template<br>
+            direct relatives for 15 people</h2>
+    </div>
+    <div style="position: fixed;right: 20px;top:20px;" id="flags">
+        <a href="#info"><img src="./img/info-3.png"></a>
+        <a href=" ./page-ua.html"> <img src="./img/flag-ua.png"></a>
+    </div>
+    <div id="screen"><!--заготовка для модальних вікон--></div>
+
+    <script>
+        let nodes = [
+            {
+                id: "son-daugther", name: "Son", path_photo: "./photo/son.png", link: "#son-daugtherModal"
+            },
+            {
+                id: "father", name: "Father", path_photo: "./photo/son.png", link: "#tatoModal"
+            }, {
+                id: "mather", name: "Mather", path_photo: "./photo/mama.png", link: "#mamaModal"
+            },
+            //ДІДИ
+            {
+                id: "gf1", name: "G.Father1", path_photo: "./photo/didus11.png", link: "#gFather1Modal"
+            },
+            {
+                id: "gm1", name: "G.Mather1", path_photo: "./photo/babusia11.png", link: "#gMather1Modal"
+            }, {
+                id: "gf2", name: "G.Father2", path_photo: "./photo/didus11.png", link: "#gFather2Modal"
+            },
+            {
+                id: "gm2", name: "G.Mather2", path_photo: "./photo/babusia22.png", link: "#gMather2Modal"
+            },
+            ///П Р А Д І Д И
+            {
+                id: "_2gf1", name: "2G.Father1", path_photo: "./photo/didus11.png", link: "#2gFather1Modal"
+            },
+            {
+                id: "_2gm1", name: "2G.Mather1", path_photo: "./photo/babusia22.png", link: "#2gMather1Modal"
+            },
+            {
+                id: "_2gf2", name: "2G.Father2", path_photo: "./photo/didus11.png", link: "#2gFather2Modal"
+            },
+            {
+                id: "_2gm2", name: "2G.Mather2", path_photo: "./photo/babusia22.png", link: "#2gMather2Modal"
+            },
+            {
+                id: "_2gf3", name: "2G.Father3", path_photo: "./photo/didus11.png", link: "#2gFather3Modal"
+            },
+            {
+                id: "_2gm3", name: "2G.Mather3", path_photo: "./photo/babusia22.png", link: "#2gMather3Modal"
+            },
+            {
+                id: "_2gf4", name: "2G.Father4", path_photo: "./photo/didus11.png", link: "#2gFather4Modal"
+            },
+            {
+                id: "_2gm4", name: "2G.Mather4", path_photo: "./photo/babusia22.png", link: "#2gMather4Modal"
+            },
+            {
+                id: "God", name: "God", path_photo: "./img/heart.png", link: "#GodModal"
+            }
+        ];
+
+
+        lineData = [
+            { from: "son-daugther", to: "father" },
+            { from: "son-daugther", to: "mather" },
+            { from: "father", to: "gf1" },
+            { from: "father", to: "gm1" },
+            { from: "mather", to: "gf2" },
+            { from: "mather", to: "gm2" },
+            { from: "gf1", to: "_2gf1" },
+            { from: "gf1", to: "_2gm1" },
+            { from: "gm1", to: "_2gf2" },
+            { from: "gm1", to: "_2gm2" },
+            { from: "gf2", to: "_2gf3" },
+            { from: "gf2", to: "_2gm3" },
+            { from: "gm2", to: "_2gf4" },
+            { from: "gm2", to: "_2gm4" },
+            { from: "God", to: "_2gf1" },
+            { from: "God", to: "_2gm1" },
+            { from: "God", to: "_2gf2" },
+            { from: "God", to: "_2gm2" },
+            { from: "God", to: "_2gf3" },
+            { from: "God", to: "_2gm3" },
+            { from: "God", to: "_2gf4" },
+            { from: "God", to: "_2gm4" },
+        ]; 
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg"
+        style="width:1400px;height:800px;background:yellow;">
+    </svg>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/winMoodalData.js">
+    </script>
+</body>
+
+</html>
