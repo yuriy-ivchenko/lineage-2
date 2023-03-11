@@ -41,7 +41,7 @@ their names and photos </p>
 
 <p>2. Open the winMoodalData.js page in the editor and replace the content of all modal windows
 on data about their relatives.</p><br>
-------------------------------------------------------<br>
+----------------------------------------------<br>
 Author: Ivchenko Yurii. +380663669013; ivchenko505@gmail.com 
 <br>
 <br>
